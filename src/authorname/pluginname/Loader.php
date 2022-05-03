@@ -19,11 +19,6 @@ final class Loader extends PluginBase{
     protected function onDisable() : void{
         
     }
-    public function onBreak(BlockBreakEvent $event){
-        foreach($event->getDrops() as $key => $item){
-            $item->kill();    
-        }
-    }
 　　 public function ItemSpawn(EntitySpawnEvent $event){
 　　　　　if(!$event->getEntity() instanceof ItemEntity) return;
         $itemEntity = $event->getEntity();
