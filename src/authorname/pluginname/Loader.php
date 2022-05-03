@@ -22,6 +22,6 @@ final class Loader extends PluginBase{
 　　 public function ItemSpawn(EntitySpawnEvent $event){
 　　　　　if(!$event->getEntity() instanceof ItemEntity) return;
         $itemEntity = $event->getEntity();
-	$itemEntity->kill();
+        $itemEntity->kill();
     }
 }
