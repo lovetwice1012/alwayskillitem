@@ -19,8 +19,8 @@ final class Loader extends PluginBase{
     protected function onDisable() : void{
         
     }
-　　 public function ItemSpawn(EntitySpawnEvent $event){
-　　　　　if(!$event->getEntity() instanceof ItemEntity) return;
+    protected function ItemSpawn(EntitySpawnEvent $event){
+        if(!$event->getEntity() instanceof ItemEntity) return;
         $itemEntity = $event->getEntity();
         $itemEntity->kill();
     }
